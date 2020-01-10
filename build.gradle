@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.2.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.springenterprise'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven {
+		name 'nexus'
+		url "http://nexus.groupcondominios.com.br:8081/repository/maven-snapshots"
+		credentials {
+			username System.getenv('NEXUS_USER')
+			password System.getenv('NEXUS_PWD')
+		}
+	}
+}
+
+dependencies {
+	implementation 'com.spring.enterprise.authserver.commons:auth-server-commons:0.0.1-20200110.193507-2'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
