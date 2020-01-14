@@ -2,20 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b54341a5-167b-45ee-bcb0-4a94c7cb5b64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/domain/Authority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/domain/UserAuthority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/OutUserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog-master.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/UsuarioServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/springenterprise/userservice/UserServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/InUserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +68,12 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="user-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -80,6 +85,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -96,16 +102,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-enterprise" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/db" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/db" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.springenterprise.userservice.dto" />
       <recent name="com.springenterprise.userservice.domain" />
       <recent name="com.springenterprise.userservice" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.springenterprise.userservice.service" />
       <recent name="com.springenterprise.userservice" />
     </key>
   </component>
@@ -199,57 +210,99 @@
       <option name="project" value="LOCAL" />
       <updated>1578691598232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="configuração basica">
+      <created>1579026725496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579026725496</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configuração download nexus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuração download nexus" />
+    <MESSAGE value="configuração basica" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuração basica" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579008188218">
+    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579035750573">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1579008188218" />
-    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578944252589">
+    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1579035750573" />
+    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579034717412">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1578944252589" />
-    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2" timestamp="1578691598152">
+    <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1579034717412" />
+    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2" timestamp="1579041251744">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1578691598152" />
+    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579041251744" />
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578945041755">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1578945041755" />
-    <state width="1320" height="218" key="GridCell.Tab.0.bottom" timestamp="1579022153093">
+    <state width="1320" height="124" key="GridCell.Tab.0.bottom" timestamp="1579041260470">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="218" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579022153093" />
-    <state width="1320" height="218" key="GridCell.Tab.0.center" timestamp="1579022153092">
+    <state width="1320" height="124" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579041260470" />
+    <state width="1320" height="124" key="GridCell.Tab.0.center" timestamp="1579041260470">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="218" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579022153092" />
-    <state width="1320" height="218" key="GridCell.Tab.0.left" timestamp="1579022153092">
+    <state width="1320" height="124" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579041260470" />
+    <state width="1320" height="124" key="GridCell.Tab.0.left" timestamp="1579041260469">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="218" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579022153092" />
-    <state width="1320" height="218" key="GridCell.Tab.0.right" timestamp="1579022153093">
+    <state width="1320" height="124" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579041260469" />
+    <state width="1320" height="124" key="GridCell.Tab.0.right" timestamp="1579041260470">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="218" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579022153093" />
+    <state width="1320" height="124" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579041260470" />
+    <state width="1320" height="185" key="GridCell.Tab.1.bottom" timestamp="1579034401238">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="185" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579034401238" />
+    <state width="1320" height="185" key="GridCell.Tab.1.center" timestamp="1579034401238">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="185" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1579034401238" />
+    <state width="1320" height="185" key="GridCell.Tab.1.left" timestamp="1579034401237">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="185" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1579034401237" />
+    <state width="1320" height="185" key="GridCell.Tab.1.right" timestamp="1579034401238">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state width="1320" height="185" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1579034401238" />
     <state x="172" y="31" key="SettingsEditor" timestamp="1579010374368">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="31" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1579010374368" />
-    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1578691601966">
+    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579026737800">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1578691601966" />
-    <state x="328" y="127" width="710" height="538" key="find.popup" timestamp="1579008841976">
+    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579026737800" />
+    <state x="328" y="127" width="710" height="538" key="find.popup" timestamp="1579039207854">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="328" y="127" width="710" height="538" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1579008841976" />
+    <state x="328" y="127" width="710" height="538" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1579039207854" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579039200793">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579039200793" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.spring.enterprise/spring-enterprise-common/0.0.1-SNAPSHOT/e02a079dd851a119ae399c761586439e55c9fe5c/spring-enterprise-common-0.0.1-SNAPSHOT-sources.jar!/com/spring/enterprise/common/controller/AbstractCrudController.java</url>
+          <line>24</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

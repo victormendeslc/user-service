@@ -1,1 +1,60 @@
+server.port: 8001
 
+spring.profiles.active: dev,swagger
+
+logging:
+  level:
+    root: INFO
+    com.spring.enterprise.demo: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.transaction.interceptor: TRACE
+    org.springframework.security: DEBUG
+
+
+spring:
+  application.name: user-service
+  jackson:
+    serialization:
+      indent_output: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/auth_db
+    username: postgres
+    password: postgres
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        default_schema: public
+        format_sql: true
+        jdbc.time_zone: UTC
+        org.hibernate.envers.audit_table_suffix: _aud
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    database: POSTGRESQL
+    generate-ddl: false
+    show-sql: true
+  liquibase:
+    contexts: dev
+
+enterprise:
+  swagger:
+    version: 1.0.0
+    title: Sample API
+    description: Description of the API...
+    termsOfServiceUrl: MINE TERMS OF SERVICE URL
+    license: License
+    licenseUrl: MY LICENSE URL
+    contactName: Contact
+    contactUrl: My
+    contactEmail: me@mail.com
+
+---
+spring.profiles: dev

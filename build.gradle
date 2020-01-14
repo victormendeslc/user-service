@@ -19,12 +19,22 @@ ext {
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
     maven {
-        name 'nexus'
+        name 'nexus-releases'
         url "http://nexus.url:8081/repository/maven-releases"
         credentials {
             username 'victor.cunha'
             password 'heliort'
+        }
+    }
+    maven {
+        name 'nexus-snapshots'
+        url "http://nexus.url:8081/repository/maven-snapshots"
+        credentials {
+            username System.getenv('NEXUS_USER')
+            password System.getenv('NEXUS_PWD')
         }
     }
 }
@@ -37,17 +47,23 @@ dependencyManagement {
 
 dependencies {
     implementation 'com.spring.enterprise.authserver.commons:auth-server-commons:0.0.1-RELEASE'
-    implementation 'com.spring.enterprise.autoconfigure:spring-enterprise-autoconfigure:0.0.1-RELEASE'
-    implementation 'com.spring.enterprise.common:spring-enterprise-common:0.0.2-RELEASE'
+    implementation 'com.spring.enterprise:spring-enterprise-starter:0.0.1-SNAPSHOT'
+    //implementation 'com.spring.enterprise.autoconfigure:spring-enterprise-autoconfigure:0.0.1-RELEASE'
+    //implementation 'com.spring.enterprise.common:spring-enterprise-common:0.0.2-RELEASE'
 
+    //implementation("io.springfox:springfox-swagger2:3.0.0-SNAPSHOT")
+    //implementation("io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT")
+    //implementation("io.springfox:springfox-spring-webflux:3.0.0-SNAPSHOT")
 
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5"
+  //  implementation "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5"
+    //compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.1'
+    //implementation "com.fasterxml.jackson.module:jackson-module-afterburner"
 
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.1'
-    implementation "com.fasterxml.jackson.module:jackson-module-afterburner"
+    //implementation 'org.liquibase:liquibase-core'
+    //implementation 'org.hibernate:hibernate-core:5.4.9.Final'
+    //implementation 'org.hibernate:hibernate-envers:5.4.9.Final'
 
-    implementation 'org.liquibase:liquibase-core'
-    implementation "org.zalando:problem-spring-webflux:${zalandoWebflux}"
+   // implementation "org.zalando:problem-spring-webflux:${zalandoWebflux}"
 
     runtimeOnly 'org.postgresql:postgresql'
 
@@ -64,11 +80,12 @@ dependencies {
     testAnnotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
-    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
+
+
+    //implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.hibernate:hibernate-core:5.4.9.Final'
-    implementation 'org.hibernate:hibernate-envers:5.4.9.Final'
+
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
@@ -79,4 +96,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+tasks.register("hello") {
+    doLast {
+        println 'Hello, World!'
+    }
 }
