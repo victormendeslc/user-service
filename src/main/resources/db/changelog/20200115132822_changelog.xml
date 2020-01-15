@@ -1,0 +1,76 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="victor (generated)" id="1579105712335-1">
+        <createSequence incrementBy="1" sequenceName="hibernate_sequence" startValue="1"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-2">
+        <createTable tableName="authority">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="authorityPK"/>
+            </column>
+            <column name="uuid" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="version" type="INTEGER"/>
+            <column name="name" type="VARCHAR(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-3">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="userPK"/>
+            </column>
+            <column name="uuid" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="version" type="INTEGER"/>
+            <column name="account_expired" type="BOOLEAN"/>
+            <column name="account_locked" type="BOOLEAN"/>
+            <column name="activation_key" type="VARCHAR(255)"/>
+            <column name="credentials_expired" type="BOOLEAN"/>
+            <column name="enabled" type="BOOLEAN"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="reset_password_key" type="VARCHAR(255)"/>
+            <column name="username" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-4">
+        <createTable tableName="user_authority">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="user_authorityPK"/>
+            </column>
+            <column name="uuid" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="version" type="INTEGER"/>
+            <column name="authority_id" type="BIGINT"/>
+            <column name="user_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-5">
+        <addUniqueConstraint columnNames="name" constraintName="AUTHORITY_UNIQUE_NAME" tableName="authority"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-6">
+        <addUniqueConstraint columnNames="uuid" constraintName="UC_AUTHORITYUUID_COL" tableName="authority"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-7">
+        <addUniqueConstraint columnNames="uuid" constraintName="UC_USERUUID_COL" tableName="user"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-8">
+        <addUniqueConstraint columnNames="uuid" constraintName="UC_USER_AUTHORITYUUID_COL" tableName="user_authority"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-9">
+        <addUniqueConstraint columnNames="user_id, authority_id" constraintName="USER_AUTHORITY_UNIQUE_USER_ID_AND_AUTHORITY_ID" tableName="user_authority"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-10">
+        <addUniqueConstraint columnNames="username" constraintName="USER_UNIQUE_USERNAME" tableName="user"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-11">
+        <addForeignKeyConstraint baseColumnNames="authority_id" baseTableName="user_authority" constraintName="FK_USER_AUTHORITY_AUTHORITY_ID" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="authority" validate="true"/>
+    </changeSet>
+    <changeSet author="victor (generated)" id="1579105712335-12">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_authority" constraintName="FK_USER_AUTHORITY_USER_ID" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="user" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,9 +1,6 @@
 package com.springenterprise.userservice.service;
 
 import com.spring.enterprise.common.exceptions.NotFoundException;
-import com.spring.enterprise.common.service.AbstractJpaAsyncService;
-import com.spring.enterprise.common.service.JpaCrudService;
-import com.springenterprise.userservice.domain.User;
 import com.springenterprise.userservice.dto.InUserDTO;
 import com.springenterprise.userservice.dto.OutUserDTO;
 import com.springenterprise.userservice.mapper.UserMapper;

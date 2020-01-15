@@ -1,7 +1,9 @@
 plugins {
+    id 'org.liquibase.gradle' version '2.0.2'
     id 'org.springframework.boot' version '2.2.2.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
+    id 'net.linguica.maven-settings' version '0.5'
 }
 
 group = 'com.springenterprise'
@@ -17,6 +19,10 @@ ext {
 }
 
 
+project.ext.databaseUrl = "jdbc:postgresql://localhost:15432/user_db"
+project.ext.referenceUrl = "hibernate:spring:com.springenterprise.userservice"
+apply from: "gradle/liquibase.gradle"
+
 repositories {
     mavenCentral()
     maven { url 'https://repo.spring.io/milestone' }
@@ -24,18 +30,10 @@ repositories {
     maven {
         name 'nexus-releases'
         url "http://nexus.url:8081/repository/maven-releases"
-        credentials {
-            username System.getenv('NEXUS_USER')
-            password System.getenv('NEXUS_PWD')
-        }
     }
     maven {
         name 'nexus-snapshots'
         url "http://nexus.url:8081/repository/maven-snapshots"
-        credentials {
-            username System.getenv('NEXUS_USER')
-            password System.getenv('NEXUS_PWD')
-        }
     }
 }
 
@@ -47,26 +45,25 @@ dependencyManagement {
 
 dependencies {
     implementation 'com.spring.enterprise.authserver.commons:auth-server-commons:0.0.1-RELEASE'
-    implementation 'com.spring.enterprise:spring-enterprise-starter:0.0.1-SNAPSHOT'
+    //implementation 'com.spring.enterprise:spring-enterprise-starter:0.0.2-SNAPSHOT'
     //implementation 'com.spring.enterprise.autoconfigure:spring-enterprise-autoconfigure:0.0.1-RELEASE'
-    //implementation 'com.spring.enterprise.common:spring-enterprise-common:0.0.2-RELEASE'
+    implementation 'com.spring.enterprise.common:spring-enterprise-common:0.0.2-RELEASE'
 
     //implementation("io.springfox:springfox-swagger2:3.0.0-SNAPSHOT")
     //implementation("io.springfox:springfox-swagger-ui:3.0.0-SNAPSHOT")
     //implementation("io.springfox:springfox-spring-webflux:3.0.0-SNAPSHOT")
 
-  //  implementation "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5"
+
     //compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.1'
     //implementation "com.fasterxml.jackson.module:jackson-module-afterburner"
 
-    //implementation 'org.liquibase:liquibase-core'
-    //implementation 'org.hibernate:hibernate-core:5.4.9.Final'
-    //implementation 'org.hibernate:hibernate-envers:5.4.9.Final'
-
+    implementation 'org.hibernate:hibernate-core:5.4.9.Final'
+    implementation 'org.hibernate:hibernate-envers:5.4.9.Final'
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-hibernate5"
    // implementation "org.zalando:problem-spring-webflux:${zalandoWebflux}"
 
     runtimeOnly 'org.postgresql:postgresql'
-
+    //implementation 'org.liquibase:liquibase-core'
     compileOnly "org.projectlombok:lombok"
     compileOnly "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 
@@ -96,10 +93,4 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-tasks.register("hello") {
-    doLast {
-        println 'Hello, World!'
-    }
 }

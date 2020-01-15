@@ -1,6 +1,7 @@
 package com.springenterprise.userservice.domain;
 
 import com.spring.enterprise.common.domain.AbstractEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "user", uniqueConstraints = @UniqueConstraint(columnNames = {"username"}, name = "USER_UNIQUE_USERNAME"))
 public class User extends AbstractEntity {

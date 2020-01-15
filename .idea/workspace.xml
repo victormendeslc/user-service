@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b54341a5-167b-45ee-bcb0-4a94c7cb5b64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/OutUserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog-master.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/liquibase.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/SchedulerAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/20200115132822_changelog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/dto/InUserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springenterprise/userservice/service/UsuarioServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -60,19 +63,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="user-service" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="user-service" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="user-service" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -93,6 +84,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WDkUTYsnGR8vi8IPLNwbVJLKsB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -101,23 +95,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/db" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gradle" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/db" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.springenterprise.userservice.dto" />
-      <recent name="com.springenterprise.userservice.domain" />
-      <recent name="com.springenterprise.userservice" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.springenterprise.userservice.service" />
       <recent name="com.springenterprise.userservice" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.springenterprise.userservice" />
+      <recent name="com.springenterprise.userservice.dto" />
+      <recent name="com.springenterprise.userservice.domain" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/gradle" />
+      <recent name="$PROJECT_DIR$/src/main/resources/db" />
     </key>
   </component>
   <component name="RunManager" selected="Application.UserServiceApplication">
@@ -133,6 +132,25 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="user-service [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="user-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -174,8 +192,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="Gradle.user-service [build]" />
+        <item itemvalue="Gradle.user-service [buildDependents]" />
+        <item itemvalue="Application.UserServiceApplication" />
         <item itemvalue="Gradle.user-service [clean]" />
       </list>
     </recent_temporary>
@@ -217,79 +236,100 @@
       <option name="project" value="LOCAL" />
       <updated>1579026725496</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="configuração basica usuario">
+      <created>1579041282419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579041282424</updated>
+    </task>
+    <task id="LOCAL-00004" summary="build">
+      <created>1579096112064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579096112064</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Configuração download nexus" />
     <MESSAGE value="configuração basica" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuração basica" />
+    <MESSAGE value="configuração basica usuario" />
+    <MESSAGE value="build" />
+    <option name="LAST_COMMIT_MESSAGE" value="build" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579035750573">
+    <state x="278" y="58" width="800" height="677" key="#Project_Structure" timestamp="1579097405560">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1579035750573" />
+    <state x="278" y="58" width="800" height="677" key="#Project_Structure/0.27.1366.741@0.27.1366.741" timestamp="1579097405560" />
+    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser" timestamp="1579096624342">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="491" y="109" width="374" height="575" key="#com.intellij.ide.util.MemberChooser/0.27.1366.741@0.27.1366.741" timestamp="1579096624342" />
     <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579034717412">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="416" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1579034717412" />
-    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2" timestamp="1579041251744">
+    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2" timestamp="1579096111855">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579041251744" />
+    <state x="196" y="27" width="963" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1579096111855" />
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578945041755">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1578945041755" />
-    <state width="1320" height="124" key="GridCell.Tab.0.bottom" timestamp="1579041260470">
+    <state width="1320" height="144" key="GridCell.Tab.0.bottom" timestamp="1579111829124">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="124" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579041260470" />
-    <state width="1320" height="124" key="GridCell.Tab.0.center" timestamp="1579041260470">
+    <state width="1320" height="144" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579111829124" />
+    <state width="1320" height="144" key="GridCell.Tab.0.center" timestamp="1579111829124">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="124" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579041260470" />
-    <state width="1320" height="124" key="GridCell.Tab.0.left" timestamp="1579041260469">
+    <state width="1320" height="144" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1579111829124" />
+    <state width="1320" height="144" key="GridCell.Tab.0.left" timestamp="1579111829124">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="124" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579041260469" />
-    <state width="1320" height="124" key="GridCell.Tab.0.right" timestamp="1579041260470">
+    <state width="1320" height="144" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1579111829124" />
+    <state width="1320" height="144" key="GridCell.Tab.0.right" timestamp="1579111829124">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="124" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579041260470" />
-    <state width="1320" height="185" key="GridCell.Tab.1.bottom" timestamp="1579034401238">
+    <state width="1320" height="144" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1579111829124" />
+    <state width="1320" height="185" key="GridCell.Tab.1.bottom" timestamp="1579041302229">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="185" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579034401238" />
-    <state width="1320" height="185" key="GridCell.Tab.1.center" timestamp="1579034401238">
+    <state width="1320" height="185" key="GridCell.Tab.1.bottom/0.27.1366.741@0.27.1366.741" timestamp="1579041302229" />
+    <state width="1320" height="185" key="GridCell.Tab.1.center" timestamp="1579041302228">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="185" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1579034401238" />
-    <state width="1320" height="185" key="GridCell.Tab.1.left" timestamp="1579034401237">
+    <state width="1320" height="185" key="GridCell.Tab.1.center/0.27.1366.741@0.27.1366.741" timestamp="1579041302228" />
+    <state width="1320" height="185" key="GridCell.Tab.1.left" timestamp="1579041302227">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="185" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1579034401237" />
-    <state width="1320" height="185" key="GridCell.Tab.1.right" timestamp="1579034401238">
+    <state width="1320" height="185" key="GridCell.Tab.1.left/0.27.1366.741@0.27.1366.741" timestamp="1579041302227" />
+    <state width="1320" height="185" key="GridCell.Tab.1.right" timestamp="1579041302228">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state width="1320" height="185" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1579034401238" />
+    <state width="1320" height="185" key="GridCell.Tab.1.right/0.27.1366.741@0.27.1366.741" timestamp="1579041302228" />
     <state x="172" y="31" key="SettingsEditor" timestamp="1579010374368">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="172" y="31" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1579010374368" />
-    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579026737800">
+    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579096113762">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579026737800" />
-    <state x="328" y="127" width="710" height="538" key="find.popup" timestamp="1579039207854">
+    <state x="278" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1579096113762" />
+    <state x="328" y="127" width="710" height="538" key="find.popup" timestamp="1579099034943">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="328" y="127" width="710" height="538" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1579039207854" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579039200793">
+    <state x="328" y="127" width="710" height="538" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1579099034943" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1579099031110">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579039200793" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.27.1366.741@0.27.1366.741" timestamp="1579099031110" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
