@@ -25,8 +25,8 @@ repositories {
         name 'nexus-releases'
         url "http://nexus.url:8081/repository/maven-releases"
         credentials {
-            username 'victor.cunha'
-            password 'heliort'
+            username System.getenv('NEXUS_USER')
+            password System.getenv('NEXUS_PWD')
         }
     }
     maven {
